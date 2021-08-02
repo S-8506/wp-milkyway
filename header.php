@@ -22,6 +22,9 @@
 <body <?php body_class('codenaive-body'); ?> >
 
 <?php 
-    wp_body_open();  // To insert the Script (asynchronous) 
+    
+    if(function_exists('wp_body_open')){
+        wp_body_open();  // To insert the Script (asynchronous) 
+    }
 ?>
 <header>Header</header>
