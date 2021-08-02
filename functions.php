@@ -8,9 +8,11 @@
  function milkyway_enqueue_default_scripts(){
 
         /**  ADD STYLESHEET HERE */
-         wp_enqueue_style('style-css',get_stylesheet_uri(),[],filemtime(get_template_directory(). '/style.css'),'all');
+        // wp_enqueue_style('style-css',get_stylesheet_uri(),[],filemtime(get_template_directory(). '/style.css'),'all');
          
-
+        // using split method way to include css
+        wp_register_style('style-css',get_stylesheet_uri(),[],filemtime(get_template_directory(). '/style.css'),'all');
+        wp_enqueue_style('style-css');
 
         /*** ADD JS FILE HERE */
          // include JS in header Section
