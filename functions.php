@@ -3,6 +3,12 @@
  * 
  * @package milkyway
  */
+if(! defined('MILKYWAY_DIR_PATH')){
+    define('MILKYWAY_DIR_PATH', untrailingslashit((get_template_directory())));
+    
+}
+require_once MILKYWAY_DIR_PATH.'/include/helpers/autoloader.php';
+
 
 
  function milkyway_enqueue_default_scripts(){
