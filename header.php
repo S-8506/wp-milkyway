@@ -11,10 +11,17 @@
 <html lang="<?php language_attributes(); ?>">
 <head>
     
-    <meta charset="utf-8" />
+    <meta charset="<?php bloginfo('charset'); ?>" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <title>Codenaive</title>
+    <?php wp_head(); ?>
+    
+    
+    <title><?php wp_title(); ?></title>
 
 </head>
-<body>
+<body <?php body_class('codenaive-body'); ?> >
+
+<?php 
+    wp_body_open();  // To insert the Script (asynchronous) 
+?>
 <header>Header</header>
