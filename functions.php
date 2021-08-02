@@ -6,9 +6,13 @@
 
 
  function milkyway_enqueue_default_scripts(){
+
+        /**  ADD STYLESHEET HERE */
          wp_enqueue_style('style-css',get_stylesheet_uri(),[],filemtime(get_template_directory(). '/style.css'),'all');
          
 
+
+        /*** ADD JS FILE HERE */
          // include JS in header Section
          wp_enqueue_script('header-js',get_template_directory_uri().'/assets/header-main.js',[],filemtime(get_template_directory(). '/assets/header-main.js'),false);
          
