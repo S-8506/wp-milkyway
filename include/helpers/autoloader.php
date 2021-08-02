@@ -40,11 +40,15 @@ function autoloader( $resource = '' ) {
 	if ( empty( $path[0] ) || empty( $path[1] ) ) {
 		return;
 	}
+    
+	/*echo '<pre>';
+	print_r($path);
+	wp_die();*/
 
 	$directory = '';
 	$file_name = '';
 
-	if ( 'inc' === $path[0] ) {
+	if ( 'include' === $path[0] ) {
 
 		switch ( $path[1] ) {
 			case 'traits':
@@ -56,7 +60,7 @@ function autoloader( $resource = '' ) {
 			case 'blocks': // phpcs:ignore PSR2.ControlStructures.SwitchDeclaration.TerminatingComment
 				/**
 				 * If there is class name provided for specific directory then load that.
-				 * otherwise find in inc/ directory.
+				 * otherwise find in include/ directory.
 				 */
 				if ( ! empty( $path[2] ) ) {
 					$directory = sprintf( 'classes/%s', $path[1] );
@@ -69,7 +73,7 @@ function autoloader( $resource = '' ) {
 				break;
 		}
 
-		$resource_path = sprintf( '%s/inc/%s/%s.php', untrailingslashit(MILKYWAY_DIR_PATH ), $directory, $file_name );
+		$resource_path = sprintf( '%s/include/%s/%s.php', untrailingslashit(MILKYWAY_DIR_PATH ), $directory, $file_name );
 
 	}
 

@@ -9,7 +9,12 @@ if(! defined('MILKYWAY_DIR_PATH')){
 }
 require_once MILKYWAY_DIR_PATH.'/include/helpers/autoloader.php';
 
+//function milkyway_codenaive_get_theme_instance(){
+   // \MILKYWAY_THEME\Include\MILKYWAY_THEME::get_instance();
+//}
 
+ \MILKYWAY_THEME\Include\MILKYWAY_THEME::get_instance();
+//milkyway_codenaive_get_theme_instance();
 
  function milkyway_enqueue_default_scripts(){
 

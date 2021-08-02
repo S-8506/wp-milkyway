@@ -5,7 +5,7 @@
  * @package: milkyway
  */
 
- namespace MILKYWAY_THEME\Include\Helpers;
+ namespace MILKYWAY_THEME\Include\Traits;
 
  trait Singleton{
 
@@ -25,7 +25,7 @@
         if(!isset($instance[$called_class])){
             $instance[$called_class] = new $called_class();
 
-            do_action( sprintf('milkyway_codenaive_theme_singleton_init%s'));
+            do_action( sprintf('milkyway_theme_singleton_init%s',$called_class));
 
         }
 
