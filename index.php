@@ -10,8 +10,7 @@
 
 
 
- <div class="content"></div>    
- Contents
+
 
  <?php 
  

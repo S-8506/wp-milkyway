@@ -27,4 +27,19 @@
         wp_body_open();  // To insert the Script (asynchronous) 
     }
 ?>
-<header>Header</header>
+
+<div id="page" class="site">
+    
+    <header id="mainHeader" class="site-header" role="banner">
+
+            <?php get_template_part('/template-components/header/navbar'); ?>
+
+    </header>
+    <div id="content" class="content">
+
+
+    </div>    
+
+
+</div>
+
