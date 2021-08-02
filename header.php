@@ -8,7 +8,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php language_attributes(); ?>">
 <head>
     
     <meta charset="utf-8" />
